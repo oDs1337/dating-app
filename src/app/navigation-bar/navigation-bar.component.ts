@@ -18,5 +18,8 @@ export class NavigationBarComponent implements OnInit {
     this.router.navigate(['']);
   }
 
+  moveToDating(): void{
+    this.router.navigate(['dating']);
+  }
 
 }

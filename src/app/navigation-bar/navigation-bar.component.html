@@ -1,5 +1,5 @@
 <div *ngIf="!accountService.isLoggedIn">
-  <button [disabled]="true">login</button>
+  <button (click)="moveToDating()">dating</button>
 </div>
 <div *ngIf="accountService.isLoggedIn">
   <button (click)="accountService.logoutUser()">log out</button>
