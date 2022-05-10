@@ -1,0 +1,23 @@
+.loginContainer{
+  width: 600px;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+
+  border: 1px solid red;
+}
+.loginForm{
+  width: 600px;
+  height: 400px;
+
+  border: 1px solid red;
+}
+.loginButton{
+  width: 600px;
+  height: 100px;
+
+  border: 1px solid red;
+}
+.loginButton{
+  background-color: lightgreen;
+}
