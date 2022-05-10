@@ -27,8 +27,13 @@ export class AccountService {
     this.#accountList.forEach(user => {
       if((username === user.username) && (password === user.password)){
         this.#isLoggedIn = true;
-        // navigate to dating component
+        this.router.navigate(['dating']);
       }
     })
+  }
+
+  logoutUser(): void{
+    this.#isLoggedIn = false;
+    this.router.navigate(['']);
   }
 }
