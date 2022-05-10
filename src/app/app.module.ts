@@ -7,6 +7,7 @@ import { LoginFormComponent } from './login-form/login-form.component';
 import { FormsModule } from '@angular/forms';
 import { DatingComponent } from './dating/dating.component';
 import { NavigationBarComponent } from './navigation-bar/navigation-bar.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { NavigationBarComponent } from './navigation-bar/navigation-bar.componen
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
