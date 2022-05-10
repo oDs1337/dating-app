@@ -1,3 +1,7 @@
+export interface UserInfoDTO{
+  results: UserInfo[],
+}
+
 export interface UserInfo{
   gender: string,
   name:{
@@ -10,6 +14,9 @@ export interface UserInfo{
   email: string,
   dob:{
     age: string,
+  },
+  picture:{
+    large: string,
   },
 
 

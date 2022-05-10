@@ -1,7 +1,7 @@
 import { Router } from '@angular/router';
 import { Injectable } from '@angular/core';
-import { Account } from './account';
-import { ACCUNTS } from './mock-account';
+import { Account } from '../account';
+import { ACCUNTS } from '../mock-account';
 
 @Injectable({
   providedIn: 'root'

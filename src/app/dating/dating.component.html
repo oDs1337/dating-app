@@ -1,5 +1,6 @@
 <div class="datingContainer">
   <div class="datingSpace">
+    <ng-container *ngIf="currentUserInfo">
     <div class="imageContainer">
       <img src={{currentUserInfo.picture.large}}>
     </div>
@@ -21,13 +22,14 @@
         <p>e-mail: {{currentUserInfo.email}}</p>
       </div>
     </div>
+  </ng-container>
   </div>
   <div class="datingButtons">
     <div class="hotButtonContainer">
-      <button class="hotButton" (click)="getUserInfo()">Hot</button>
+      <button class="hotButton" (click)="getNewUser()">Hot</button>
     </div>
     <div class="notButtonContainer">
-      <button class="notButton" (click)="getUserInfo()">Not</button>
+      <button class="notButton" (click)="getNewUser()">Not</button>
     </div>
   </div>
 </div>

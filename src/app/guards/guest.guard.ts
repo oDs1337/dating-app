@@ -1,4 +1,4 @@
-import { AccountService } from './account.service';
+import { AccountService } from '../services/account.service';
 import { Injectable } from '@angular/core';
 import { ActivatedRouteSnapshot, CanActivate, RouterStateSnapshot, UrlTree } from '@angular/router';
 import { Observable } from 'rxjs';
@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
-export class UserGuard implements CanActivate {
+export class GuestGuard implements CanActivate {
 
   constructor(private accountService: AccountService) { }
 
@@ -14,7 +14,7 @@ export class UserGuard implements CanActivate {
     route: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
 
-    return this.accountService.isLoggedIn;
+    return !this.accountService.isLoggedIn;
 
   }
 
