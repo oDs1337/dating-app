@@ -1,32 +1,33 @@
 <div class="datingContainer">
   <div class="datingSpace">
     <div class="imageContainer">
-
+      <img src={{currentUserInfo.picture.large}}>
     </div>
+
     <div class="infoContainer">
       <div class="name">
-        <p>name</p>
+        <p>name: {{currentUserInfo.name.first}}</p>
       </div>
       <div class="lastName">
-        <p>last name</p>
+        <p>last name: {{currentUserInfo.name.last}}</p>
       </div>
       <div class="city">
-        <p>city</p>
+        <p>city: {{currentUserInfo.location.city}}</p>
       </div>
       <div class="age">
-        <p>age</p>
+        <p>age: {{currentUserInfo.dob.age}}</p>
       </div>
       <div class="email">
-        <p>e-mail</p>
+        <p>e-mail: {{currentUserInfo.email}}</p>
       </div>
     </div>
   </div>
   <div class="datingButtons">
     <div class="hotButtonContainer">
-      <button class="hotButton">Hot</button>
+      <button class="hotButton" (click)="getUserInfo()">Hot</button>
     </div>
     <div class="notButtonContainer">
-      <button class="notButton">Not</button>
+      <button class="notButton" (click)="getUserInfo()">Not</button>
     </div>
   </div>
 </div>
