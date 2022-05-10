@@ -1,1 +1,6 @@
-<button (click)="loginUser()">login</button>
+<div *ngIf="!accountService.isLoggedIn">
+  <button [disabled]="true">login</button>
+</div>
+<div *ngIf="accountService.isLoggedIn">
+  <button (click)="accountService.logoutUser()">log out</button>
+</div>
