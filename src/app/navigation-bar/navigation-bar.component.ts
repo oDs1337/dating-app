@@ -1,3 +1,5 @@
+import { Router } from '@angular/router';
+import { AccountService } from './../account.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +9,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavigationBarComponent implements OnInit {
 
-  constructor() { }
+  constructor(private AccountService: AccountService, private router: Router) { }
 
   ngOnInit(): void {
   }
+
+  loginUser(): void{
+    this.router.navigate(['']);
+  }
+
 
 }
