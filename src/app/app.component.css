@@ -1,0 +1,27 @@
+.mainContainer{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.loginBar{
+  width: 400px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border: 1px solid red;
+}
+.routerContainer{
+  width: 600px;
+  height: 500px;
+  margin-top: 30px;
+
+  border: 1px solid red;
+}
