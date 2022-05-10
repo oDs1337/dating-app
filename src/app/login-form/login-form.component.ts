@@ -16,7 +16,6 @@ export class LoginFormComponent implements OnInit {
 
   loginPressed(value: Account){
     this.accountService.loginUser(value);
-    console.log(value);
   }
 
 
