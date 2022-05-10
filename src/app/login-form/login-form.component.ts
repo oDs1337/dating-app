@@ -1,4 +1,6 @@
+import { AccountService } from './../account.service';
 import { Component, OnInit } from '@angular/core';
+import { Account } from '../account';
 
 @Component({
   selector: 'app-login-form',
@@ -7,10 +9,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginFormComponent implements OnInit {
 
-  constructor() { }
+  constructor(private accountService: AccountService) { }
 
   ngOnInit(): void {
+  }
 
+  loginPressed(value: Account){
+    this.accountService.loginUser(value);
+    console.log(value);
   }
 
 

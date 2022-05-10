@@ -1,7 +1,12 @@
 <div class="loginContainer">
-  <form #userLogin="ngForm">
+  <form #userLogin="ngForm" (ngSubmit)="loginPressed(userLogin.value)">
     <div class="loginForm">
-
+      <div class="username">
+        <input type="text" name="username" placeholder="username" ngModel>
+      </div>
+      <div class="password">
+        <input type="password" name="password" placeholder="password" ngModel>
+      </div>
     </div>
     <div class="loginButton">
       <button type="submit" class="loginButton">
