@@ -1,35 +1,23 @@
 <div class="datingContainer">
-  <div class="datingSpace">
-    <ng-container *ngIf="currentUserInfo">
+  <div class="roundingContainer">
     <div class="imageContainer">
-      <img src={{currentUserInfo.picture.large}}>
+      <img src={{currentUserInfo?.picture?.large}} alt="user picture">
     </div>
-
     <div class="infoContainer">
-      <div class="name">
-        <p>name: {{currentUserInfo.name.first}}</p>
+      <div class="nameAgeInfo">
+        <span>{{currentUserInfo?.name?.first}}</span>, <span>{{currentUserInfo?.dob?.age}}</span>
       </div>
-      <div class="lastName">
-        <p>last name: {{currentUserInfo.name.last}}</p>
-      </div>
-      <div class="city">
-        <p>city: {{currentUserInfo.location.city}}</p>
-      </div>
-      <div class="age">
-        <p>age: {{currentUserInfo.dob.age}}</p>
-      </div>
-      <div class="email">
-        <p>e-mail: {{currentUserInfo.email}}</p>
+      <div class="descriptionInfo">
+        {{currentUserInfo?.location?.city}}, {{currentUserInfo?.gender}}
       </div>
     </div>
-  </ng-container>
   </div>
-  <div class="datingButtons">
-    <div class="hotButtonContainer">
-      <button class="hotButton" (click)="getNewUser()">Hot</button>
+  <div class="buttonsContainer">
+    <div class="notButton">
+      <button mat-raised-button class="notButtonStyle" (click)="getNewUser()"><mat-icon>delete</mat-icon></button>
     </div>
-    <div class="notButtonContainer">
-      <button class="notButton" (click)="getNewUser()">Not</button>
+    <div class="hotButton">
+      <button mat-raised-button class="hotButtonStyle" (click)="getNewUser()"><mat-icon>favorite</mat-icon></button>
     </div>
   </div>
 </div>

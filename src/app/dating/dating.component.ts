@@ -12,6 +12,13 @@ import { RandomUserService } from '../services/random-user.service';
 })
 export class DatingComponent implements OnInit, OnDestroy {
 
+  centered = false;
+  disabled = false;
+  unbounded = false;
+
+  radius?: number;
+  color?: string;
+
   currentUserInfo?: UserInfo;
   userInfoSubscription?: Subscription;
 

@@ -16,6 +16,7 @@ export class GuestGuard implements CanActivate {
 
     return !this.accountService.isLoggedIn;
 
+
   }
 
 }
