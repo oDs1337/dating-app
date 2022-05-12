@@ -5,7 +5,7 @@
     </div>
     <div class="infoContainer">
       <div class="nameAgeInfo">
-        {{currentUserInfo?.name?.first}}, {{currentUserInfo?.dob?.age}}
+        <span>{{currentUserInfo?.name?.first}}</span>, <span>{{currentUserInfo?.dob?.age}}</span>
       </div>
       <div class="descriptionInfo">
         {{currentUserInfo?.location?.city}}, {{currentUserInfo?.gender}}
@@ -14,10 +14,10 @@
   </div>
   <div class="buttonsContainer">
     <div class="notButton">
-      <button class="notButtonStyle" (click)="getNewUser()">Not</button>
+      <button mat-raised-button class="notButtonStyle" (click)="getNewUser()"><mat-icon>delete</mat-icon></button>
     </div>
     <div class="hotButton">
-      <button class="hotButtonStyle" (click)="getNewUser()">Hot</button>
+      <button mat-raised-button class="hotButtonStyle" (click)="getNewUser()"><mat-icon>favorite</mat-icon></button>
     </div>
   </div>
 </div>
