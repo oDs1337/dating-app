@@ -1,16 +1,21 @@
 <div class="datingContainer">
   <div class="roundingContainer">
-    <div class="imageContainer">
-      <img src={{currentUserInfo?.picture?.large}} alt="user picture">
-    </div>
-    <div class="infoContainer">
-      <div class="nameAgeInfo">
-        <span>{{currentUserInfo?.name?.first}}</span>, <span>{{currentUserInfo?.dob?.age}}</span>
+    <ng-container *ngIf="!!currentUserInfo">
+      <div class="imageContainer">
+        <img src={{currentUserInfo?.picture?.large}} alt="user picture">
       </div>
-      <div class="descriptionInfo">
-        {{currentUserInfo?.location?.city}}, {{currentUserInfo?.gender}}
+      <div class="infoContainer">
+        <div class="nameAgeInfo">
+          <span>{{currentUserInfo?.name?.first}}</span> <span>{{currentUserInfo?.dob?.age}}</span>
+        </div>
+        <div class="descriptionInfo">
+          {{currentUserInfo?.location?.city}} {{currentUserInfo?.gender}}
+        </div>
       </div>
-    </div>
+    </ng-container>
+    <ng-container *ngIf="!currentUserInfo">
+      LOŁDINK
+    </ng-container>
   </div>
   <div class="buttonsContainer">
     <div class="notButton">
